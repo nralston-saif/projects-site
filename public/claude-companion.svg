@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 90" width="100" height="90">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
   <!-- Body pixels - 10x7 grid, each pixel is 8x8 -->
-  <g fill="#EBC0B3">
+  <g fill="#E8C4BA">
     <!-- Row 0 -->
     <rect x="16" y="0" width="8" height="8"/>
     <rect x="24" y="0" width="8" height="8"/>
@@ -80,15 +80,14 @@
     <rect x="48" y="32" width="8" height="8"/>
     <rect x="56" y="32" width="8" height="8"/>
   </g>
-  <!-- Feet -->
-  <g fill="#E0ADA1">
-    <!-- Left foot -->
-    <rect x="16" y="56" width="8" height="8"/>
-    <rect x="16" y="64" width="8" height="8"/>
-    <rect x="24" y="64" width="8" height="8"/>
-    <!-- Right foot -->
-    <rect x="56" y="56" width="8" height="8"/>
-    <rect x="48" y="64" width="8" height="8"/>
-    <rect x="56" y="64" width="8" height="8"/>
+  <!-- Eye sparkles - small white pixel in top-left of each eye -->
+  <g fill="#ffffff">
+    <rect x="16" y="24" width="4" height="4"/>
+    <rect x="48" y="24" width="4" height="4"/>
+  </g>
+  <!-- Feet - simple 1-wide columns -->
+  <g fill="#D4A99E">
+    <rect x="24" y="56" width="8" height="16"/>
+    <rect x="48" y="56" width="8" height="16"/>
   </g>
 </svg>
