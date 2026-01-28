@@ -7,9 +7,10 @@ platform: "macOS 14.0+"
 image: "/code-companion.svg"
 requirements:
   - "macOS 14.0+"
-  - "Claude Code CLI"
+  - "Xcode CLI tools"
   - "Node.js 18+"
-  - "jq (brew install jq)"
+  - "jq"
+  - "Claude Code CLI"
 ---
 
 ## What it does
@@ -33,13 +34,22 @@ The pixel art character lives on your desktop and changes appearance based on Cl
 
 ## Setup
 
+First, install the prerequisites if you don't have them:
+
+```bash
+xcode-select --install  # Xcode CLI tools (for Swift)
+brew install node jq    # Node.js and jq
+```
+
+Then clone and run setup:
+
 ```bash
 git clone https://github.com/nralston-saif/code-companion.git
 cd code-companion
 ./setup.sh
 ```
 
-Then restart Claude Code. That's it — the setup script handles everything automatically.
+The setup script checks for missing dependencies and configures everything automatically. Once complete, restart Claude Code to connect.
 
 ## Themes
 
