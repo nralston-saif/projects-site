@@ -40,30 +40,7 @@ cd code-companion
 ./setup.sh
 ```
 
-Add to your `~/.claude.json`:
-
-```json
-{
-  "mcpServers": {
-    "code-companion": {
-      "command": "node",
-      "args": ["/path/to/code-companion/mcp-server/dist/index.js"]
-    }
-  }
-}
-```
-
-Replace `/path/to/code-companion` with the actual path where you cloned the repo.
-
-## Running
-
-From the repo directory:
-
-```bash
-swift run
-```
-
-Or build the app and copy to Applications.
+The setup script builds the app, configures Claude Code automatically, and launches the companion. Just restart Claude Code to connect.
 
 ## Themes
 
