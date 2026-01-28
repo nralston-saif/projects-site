@@ -1,6 +1,6 @@
 ---
 name: "Claude Companion"
-description: "Desktop companion that shows Claude Code's status with visual feedback and notifications"
+description: "Desktop notifications for Claude Code — alerts you when input is needed or tasks complete"
 repo: "https://github.com/nralston-saif/claude-companion"
 category: "AI Utilities"
 platform: "macOS 14.0+"
@@ -13,11 +13,15 @@ requirements:
 
 ## What it does
 
-A pixel art character that lives on your desktop and shows what Claude Code is doing in real-time. It changes appearance based on Claude's state — thinking, working, waiting for input, or idle.
+A desktop companion that notifies you when Claude Code needs your attention. Stop checking back on long-running tasks — the companion alerts you when:
+
+- **Permissions are needed** — Claude is waiting for you to approve an action
+- **Input is required** — Claude has a question or needs clarification
+- **Tasks complete** — Your work is done and ready to review
 
 ![Claude Companion](/claude-companion.svg)
 
-When Claude needs your attention, the companion bounces and plays a sound. When a task completes, it celebrates.
+The pixel art character lives on your desktop and changes appearance based on Claude's state. When something needs your attention, it bounces and plays a sound so you can step away and stay productive.
 
 ## Features
 
