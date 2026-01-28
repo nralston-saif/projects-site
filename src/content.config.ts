@@ -10,6 +10,7 @@ const tools = defineCollection({
     category: z.string(),
     platform: z.string().optional(),
     requirements: z.array(z.string()).optional(),
+    image: z.string().optional(),
   }),
 });
 

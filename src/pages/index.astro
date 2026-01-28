@@ -23,8 +23,13 @@ const categories = tools.reduce((acc, tool) => {
         {categoryTools.map((tool) => (
           <li>
             <a href={`/tools/${tool.id}`} class="tool-link">
-              <span class="tool-name">{tool.data.name}</span>
-              <span class="tool-desc">{tool.data.description}</span>
+              {tool.data.image && (
+                <img src={tool.data.image} alt={tool.data.name} class="tool-image" />
+              )}
+              <div class="tool-info">
+                <span class="tool-name">{tool.data.name}</span>
+                <span class="tool-desc">{tool.data.description}</span>
+              </div>
             </a>
           </li>
         ))}
@@ -53,7 +58,9 @@ const categories = tools.reduce((acc, tool) => {
   }
 
   .tool-link {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     padding: 1rem;
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -64,6 +71,16 @@ const categories = tools.reduce((acc, tool) => {
   .tool-link:hover {
     border-color: var(--accent);
     text-decoration: none;
+  }
+
+  .tool-image {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+  }
+
+  .tool-info {
+    flex: 1;
   }
 
   .tool-name {

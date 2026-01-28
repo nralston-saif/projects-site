@@ -4,6 +4,7 @@ description: "Desktop companion that shows Claude Code's status with visual feed
 repo: "https://github.com/nralston-saif/claude-companion"
 category: "AI Utilities"
 platform: "macOS 14.0+"
+image: "/claude-companion.svg"
 requirements:
   - "macOS 14.0+"
   - "Claude Code CLI"
@@ -14,7 +15,7 @@ requirements:
 
 A pixel art character that lives on your desktop and shows what Claude Code is doing in real-time. It changes appearance based on Claude's state — thinking, working, waiting for input, or idle.
 
-![Claude Companion](/claude-companion.png)
+![Claude Companion](/claude-companion.svg)
 
 When Claude needs your attention, the companion bounces and plays a sound. When a task completes, it celebrates.
 
