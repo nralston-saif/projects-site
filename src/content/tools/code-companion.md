@@ -1,10 +1,10 @@
 ---
-name: "Claude Companion"
+name: "Code Companion"
 description: "Desktop notifications for Claude Code — alerts you when input is needed or tasks complete"
-repo: "https://github.com/nralston-saif/claude-companion"
+repo: "https://github.com/nralston-saif/code-companion"
 category: "AI Utilities"
 platform: "macOS 14.0+"
-image: "/claude-companion.svg"
+image: "/code-companion.svg"
 requirements:
   - "macOS 14.0+"
   - "Claude Code CLI"
@@ -19,7 +19,7 @@ A desktop companion that notifies you when Claude Code needs your attention. Sto
 - **Input is required** — Claude has a question or needs clarification
 - **Tasks complete** — Your work is done and ready to review
 
-![Claude Companion](/claude-companion.svg)
+![Code Companion](/code-companion.svg)
 
 The pixel art character lives on your desktop and changes appearance based on Claude's state. When something needs your attention, it bounces and plays a sound so you can step away and stay productive.
 
@@ -35,8 +35,8 @@ The pixel art character lives on your desktop and changes appearance based on Cl
 Clone and run the setup script:
 
 ```bash
-git clone https://github.com/nralston-saif/claude-companion.git
-cd claude-companion
+git clone https://github.com/nralston-saif/code-companion.git
+cd code-companion
 ./setup.sh
 ```
 
@@ -45,15 +45,15 @@ Add to your `~/.claude.json`:
 ```json
 {
   "mcpServers": {
-    "claude-companion": {
+    "code-companion": {
       "command": "node",
-      "args": ["/path/to/claude-companion/mcp-server/dist/index.js"]
+      "args": ["/path/to/code-companion/mcp-server/dist/index.js"]
     }
   }
 }
 ```
 
-Replace `/path/to/claude-companion` with the actual path where you cloned the repo.
+Replace `/path/to/code-companion` with the actual path where you cloned the repo.
 
 ## Running
 
