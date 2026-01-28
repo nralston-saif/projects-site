@@ -15,7 +15,7 @@ requirements:
 
 A desktop companion that notifies you when Claude Code needs your attention. Stop checking back on long-running tasks — the companion alerts you when:
 
-- **Permissions are needed** — Claude is waiting for you to approve an action
+- **Approval is needed** — Claude is waiting for you to approve an action
 - **Input is required** — Claude has a question or needs clarification
 - **Tasks complete** — Your work is done and ready to review
 
