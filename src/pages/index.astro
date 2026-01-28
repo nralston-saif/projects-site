@@ -1,0 +1,82 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const tools = await getCollection('tools');
+
+// Group by category
+const categories = tools.reduce((acc, tool) => {
+  const cat = tool.data.category;
+  if (!acc[cat]) acc[cat] = [];
+  acc[cat].push(tool);
+  return acc;
+}, {} as Record<string, typeof tools>);
+---
+
+<Base title="Free Tools">
+  <h1>Free Tools</h1>
+  <p class="intro">Open source tools for developers and power users. Take the code and do whatever you want with it.</p>
+
+  {Object.entries(categories).map(([category, categoryTools]) => (
+    <section>
+      <h2>{category}</h2>
+      <ul class="tool-list">
+        {categoryTools.map((tool) => (
+          <li>
+            <a href={`/tools/${tool.id}`} class="tool-link">
+              <span class="tool-name">{tool.data.name}</span>
+              <span class="tool-desc">{tool.data.description}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</Base>
+
+<style>
+  .intro {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
+
+  .tool-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .tool-list li {
+    margin-bottom: 0.75rem;
+  }
+
+  .tool-link {
+    display: block;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: border-color 0.15s;
+  }
+
+  .tool-link:hover {
+    border-color: var(--accent);
+    text-decoration: none;
+  }
+
+  .tool-name {
+    display: block;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 0.25rem;
+  }
+
+  .tool-desc {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+  }
+</style>
