@@ -14,6 +14,8 @@ requirements:
 
 A pixel art character that lives on your desktop and shows what Claude Code is doing in real-time. It changes appearance based on Claude's state — thinking, working, waiting for input, or idle.
 
+![Claude Companion](/claude-companion.png)
+
 When Claude needs your attention, the companion bounces and plays a sound. When a task completes, it celebrates.
 
 ## Features
