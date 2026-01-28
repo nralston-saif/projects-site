@@ -40,7 +40,9 @@ cd code-companion
 ./setup.sh
 ```
 
-The setup script builds the app, configures Claude Code automatically, and launches the companion. Just restart Claude Code to connect.
+The setup script builds the app, configures the MCP server and notification hooks automatically, and launches the companion. Just restart Claude Code to connect.
+
+> Requires `jq` for auto-configuration. Install with `brew install jq` if needed.
 
 ## Themes
 
